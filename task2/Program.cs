@@ -2,9 +2,9 @@
 //сумма цифр которых четна 
  
 
-int[,] GreatMatrix(int strokcount, int stolbcount)
+int[,] GreatMatrix(int strokcount, int stolbcount) //создали функцию для создания двухмерного массива
 {
-    int[,] matrix = new int[strokcount, stolbcount];
+    int[,] matrix = new int[strokcount, stolbcount];// определили таблицу
 
     Random rnd = new Random();
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -18,7 +18,7 @@ int[,] GreatMatrix(int strokcount, int stolbcount)
     return matrix;
 }
 
-void ShowMatrix(int[,] matrix)
+void ShowMatrix(int[,] matrix) // создали функцию для вывода таблицы
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
@@ -30,9 +30,11 @@ void ShowMatrix(int[,] matrix)
     }
 }
 
-int[,] matrix = GreatMatrix(2, 3);
-ShowMatrix(matrix);
-foreach (int e in matrix)
+int[,] matrix = GreatMatrix(4, 3); //вызвали функцию создания массива
+ShowMatrix(matrix);                 //вывали функцию вывода на консоль
+
+
+foreach (int e in matrix)            // определяем интересные числа         
 {
     if (Isinterstig(e) == true)
     {
@@ -40,7 +42,7 @@ foreach (int e in matrix)
     }
 }
 
-bool Isinterstig(int value)
+bool Isinterstig(int value) // создали функцию  для определения на четность суммы цифр чисел
 {
     int sumDigit = GreatSumDigit(value);
     if (sumDigit % 2 == 0)
@@ -52,7 +54,7 @@ bool Isinterstig(int value)
 
 }
 
-int GreatSumDigit(int value)
+int GreatSumDigit(int value) //создали функцию для подсчета суммы цифр
 {
     int sum = 0;
     while (0 < value)
