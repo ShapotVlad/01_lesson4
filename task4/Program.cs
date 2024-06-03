@@ -3,14 +3,14 @@
 
 Console.WriteLine("start");
 
-int[] numbers = { 4, 8, 12, 22, 16, 13, 18 };
+int[] numbers = { 4, 8, 12, 22, 16, 13, 18 };// вводим массив
 
-foreach (int e in numbers)
+foreach (int e in numbers)//проходим массив циклом форэч
 {
-    if( e % 2 == 1)
+    if( e % 2 == 1)//если число нечётное
     {
-        Console.WriteLine("есть число нечетное");
-        break;
+        Console.WriteLine("есть число нечетное");//выводим на консоль
+        break;                                  //остановливаем программу
     }
 }
 Console.WriteLine("stop");
